@@ -38,7 +38,7 @@ class ComposerStaticInitdb0a4e2eed5394cfab48f679b98ec95b
         'WooCommerceSerialNumbers\\Admin\\Requests' => __DIR__ . '/../..' . '/includes/Admin/Requests.php',
         'WooCommerceSerialNumbers\\Admin\\Settings' => __DIR__ . '/../..' . '/src/Admin/Settings.php',
         'WooCommerceSerialNumbers\\Cache' => __DIR__ . '/../..' . '/src/Cache.php',
-        'WooCommerceSerialNumbers\\Compat' => __DIR__ . '/../..' . '/src/Compat.php',
+        'WooCommerceSerialNumbers\\Compat' => __DIR__ . '/../..' . '/includes/Compat.php',
         'WooCommerceSerialNumbers\\Cron' => __DIR__ . '/../..' . '/src/Cron.php',
         'WooCommerceSerialNumbers\\Encryption' => __DIR__ . '/../..' . '/src/Encryption.php',
         'WooCommerceSerialNumbers\\Frontend\\Frontend' => __DIR__ . '/../..' . '/src/Frontend/Frontend.php',

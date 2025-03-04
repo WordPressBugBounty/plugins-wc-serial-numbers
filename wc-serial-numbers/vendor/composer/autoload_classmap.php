@@ -21,7 +21,7 @@ return array(
     'WooCommerceSerialNumbers\\Admin\\Requests' => $baseDir . '/includes/Admin/Requests.php',
     'WooCommerceSerialNumbers\\Admin\\Settings' => $baseDir . '/src/Admin/Settings.php',
     'WooCommerceSerialNumbers\\Cache' => $baseDir . '/src/Cache.php',
-    'WooCommerceSerialNumbers\\Compat' => $baseDir . '/src/Compat.php',
+    'WooCommerceSerialNumbers\\Compat' => $baseDir . '/includes/Compat.php',
     'WooCommerceSerialNumbers\\Cron' => $baseDir . '/src/Cron.php',
     'WooCommerceSerialNumbers\\Encryption' => $baseDir . '/src/Encryption.php',
     'WooCommerceSerialNumbers\\Frontend\\Frontend' => $baseDir . '/src/Frontend/Frontend.php',
