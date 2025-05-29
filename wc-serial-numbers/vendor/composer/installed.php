@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'pluginever/wc-serial-numbers',
-        'pretty_version' => 'v2.1.8',
-        'version' => '2.1.8.0',
-        'reference' => '9bd3815e2130fade56b86a8ac380df794ab46ca2',
+        'pretty_version' => 'v2.1.9',
+        'version' => '2.1.9.0',
+        'reference' => 'bf84762636604614be7b8b538e4b2265bb981451',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'pluginever/wc-serial-numbers' => array(
-            'pretty_version' => 'v2.1.8',
-            'version' => '2.1.8.0',
-            'reference' => '9bd3815e2130fade56b86a8ac380df794ab46ca2',
+            'pretty_version' => 'v2.1.9',
+            'version' => '2.1.9.0',
+            'reference' => 'bf84762636604614be7b8b538e4b2265bb981451',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
