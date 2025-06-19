@@ -6,7 +6,7 @@
  * the different data object classes.
  *
  * @since 1.0.0
- * @version 1.0.9
+ * @version 1.1.0
  * @package Framework
  */
 
@@ -904,10 +904,11 @@ abstract class Model {
 				 * @param string $sql SQL for finding the item count.
 				 * @param array $items Query items.
 				 * @param array $args Query arguments.
+				 * @param array $clauses Query clauses.
 				 *
 				 * @since 1.0.0
 				 */
-				$found_rows = apply_filters( $this->get_hook_prefix() . '_found_rows', 'SELECT FOUND_ROWS()', $items, $args );
+				$found_rows = apply_filters( $this->get_hook_prefix() . '_found_rows', 'SELECT FOUND_ROWS()', $items, $args, compact( 'from', 'join', 'where', 'groupby', 'having', 'orderby', 'limit' ) );
 				$total      = (int) $wpdb->get_var( $found_rows ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
 			}
 
