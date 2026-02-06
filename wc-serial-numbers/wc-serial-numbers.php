@@ -1,23 +1,23 @@
 <?php
 /**
- * Plugin Name:          WC Serial Numbers
+ * Plugin Name:          Serial Numbers
  * Plugin URI:           https://pluginever.com/plugins/woocommerce-serial-numbers-pro/
- * Description:          Sell and manage license keys/ serial numbers/ secret keys easily within your WooCommerce store.
- * Version:              2.2.3
+ * Description:          Sell and manage license keys, serial numbers, and secret keys easily within your WooCommerce store.
+ * Version:              2.3.2
  * Requires at least:    5.2
+ * Tested up to:         6.9
  * Requires PHP:         7.4
  * Author:               PluginEver
- * Author URI:           https://pluginever.com
+ * Author URI:           https://pluginever.com/
  * License:              GPL v2 or later
  * License URI:          https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:          wc-serial-numbers
  * Domain Path:          /languages
- * Tested up to:         6.8
  * WC requires at least: 3.0.0
- * WC tested up to:      10.2
+ * WC tested up to:      10.4
  * Requires Plugins:     woocommerce
  *
- * @package WooCommerceSerialNumbers
+ * @link                 https://pluginever.com
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,16 +26,23 @@
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+ * @author              Sultan Nasir Uddin <manikdrmc@gmail.com>
+ * @copyright           2026 ByteEver
+ * @license             GPL-2.0+
+ * @package             WooCommerceSerialNumbers
  */
 
 use WooCommerceSerialNumbers\Plugin;
 
-// Don't call the file directly.
-defined( 'ABSPATH' ) || exit();
+defined( 'ABSPATH' ) || exit;
 
-// Require the autoloader.
+// Autoloader.
 require_once __DIR__ . '/vendor/autoload.php';
 
 /**
@@ -52,7 +59,7 @@ function WCSN() { // phpcs:ignore WordPress.NamingConventions.ValidFunctionName.
 		'docs_url'         => 'https://pluginever.com/docs/wocommerce-serial-numbers/',
 		'premium_url'      => 'https://pluginever.com/plugins/woocommerce-serial-numbers-pro/',
 		'premium_basename' => 'wc-serial-numbers-pro',
-		'review_url'       => 'https://wordpress.org/support/plugin/wc-serial-numbers/reviews/?filter=5#new-post',
+		'review_url'       => 'https://wordpress.org/support/plugin/wc-serial-numbers/reviews/#new-post',
 	);
 
 	return Plugin::create( $data );

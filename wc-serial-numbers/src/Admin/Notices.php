@@ -41,13 +41,14 @@ class Notices {
 		if ( ! $is_outdated_pro ) {
 			$is_outdated_pro = function_exists( 'wc_serial_numbers_pro' ) && is_callable( array( 'wc_serial_numbers_pro', 'get_version' ) ) && wc_serial_numbers_pro()->get_version() && version_compare( wc_serial_numbers_pro()->get_version(), '1.4.0', '<' );
 		}
+
 		if ( $is_outdated_pro ) {
 			$this->notices[] = array(
 				'type'    => 'error', // add notice-alt and notice-large class.
 				'message' => sprintf(
 				/* translators: %1$s: link to the plugin page, %2$s: link to the plugin page */
 					__( '%s is not functional because you are using outdated version of the plugin, please update to the version 1.3.8 or higher.', 'wc-serial-numbers' ),
-					'<a href="' . esc_url( WCSN()->get_data( 'premium_url' ) ) . '" target="_blank">WC Serial Numbers Pro</a>'
+					'<a href="' . esc_url( WCSN()->get_data( 'premium_url' ) ) . '" target="_blank">Serial Numbers Pro</a>'
 				),
 			);
 		}

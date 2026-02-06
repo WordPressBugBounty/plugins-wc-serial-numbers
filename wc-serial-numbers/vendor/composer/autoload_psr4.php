@@ -6,5 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'WooCommerceSerialNumbers\\' => array($baseDir . '/includes', $baseDir . '/src', $baseDir . '/lib'),
+    'WooCommerceSerialNumbers\\Lib\\' => array($vendorDir . '/pluginever/framework-settings/src', $vendorDir . '/pluginever/framework-plugin/src', $vendorDir . '/pluginever/framework-model/src'),
+    'WooCommerceSerialNumbers\\' => array($baseDir . '/includes', $baseDir . '/src'),
 );
