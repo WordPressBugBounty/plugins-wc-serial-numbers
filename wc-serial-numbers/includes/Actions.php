@@ -23,10 +23,7 @@ class Actions {
 	 * @since 1.5.6
 	 */
 	public function __construct() {
-		add_action( 'wc_serial_numbers_key_db_data', array( __CLASS__, 'decrypt_key' ) );
-		add_action( 'wc_serial_numbers_key_insert_data', array( __CLASS__, 'encrypt_key' ) );
-		add_action( 'wc_serial_numbers_key_update_data', array( __CLASS__, 'encrypt_key' ) );
-		add_action( 'wc_serial_numbers_key_insert', array( __CLASS__, 'enable_product' ) );
+		add_action( 'wc_serial_numbers_key_inserted', array( __CLASS__, 'enable_product' ), 5 );
 		add_action( 'wc_serial_numbers_key_deleted', array( __CLASS__, 'delete_activations' ) );
 		add_action( 'wc_serial_numbers_activation_inserted', array( __CLASS__, 'update_activation_count' ) );
 		add_action( 'wc_serial_numbers_activation_deleted', array( __CLASS__, 'update_activation_count' ) );
@@ -63,22 +60,26 @@ class Actions {
 	}
 
 	/**
-	 * Enable product.
+	 * Marks the product as a serial key product.
 	 *
-	 * @param int $key_id The key ID.
+	 * @param Key $key The key object.
 	 *
 	 * @since 1.4.6
+	 * @return void
 	 */
-	public static function enable_product( $key_id ) {
-		$key = Key::find( $key_id );
-
-		if ( $key ) {
-			$product_id = $key->get_product_id();
-
-			if ( $product_id ) {
-				update_post_meta( $product_id, '_is_serial_number', 'yes' );
-			}
+	public static function enable_product( $key ) {
+		if ( ! $key instanceof Key ) {
+			return;
 		}
+
+		$product = $key->get_product();
+
+		if ( ! $product || 'yes' === $product->get_meta( '_is_serial_number' ) ) {
+			return;
+		}
+
+		$product->update_meta_data( '_is_serial_number', 'yes' );
+		$product->save();
 	}
 
 	/**
